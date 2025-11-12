@@ -1,0 +1,4 @@
+# A PNG has no EXIF → fallback parser
+convert -size 100x100 xc:lightblue data/raw/photo2.png   # ImageMagick
+# or with Python
+python -c "from PIL import Image; Image.new('RGB',(100,100),(100,150,255)).save('data/raw/photo2.png')"

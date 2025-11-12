@@ -1,0 +1,1 @@
+open('data/raw/invoice.pdf', 'wb').write(b'%PDF-fake')

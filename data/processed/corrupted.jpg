@@ -1,0 +1,1 @@
+open('data/raw/corrupted.jpg', 'wb').write(b'NOT_A_JPEG')

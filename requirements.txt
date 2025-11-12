@@ -1,0 +1,8 @@
+pymongo==4.7.3
+beautifulsoup4==4.12.3
+lxml==5.2.2
+Pillow==10.3.0
+pysrt==1.1.2
+pytest==8.2.2
+# Optional AI
+# openai==1.30.1

@@ -1,0 +1,13 @@
+# Create a tiny JPEG with fake EXIF (requires Pillow)
+python - <<'PY'
+from PIL import Image, ExifTags
+import datetime, random
+
+im = Image.new('RGB', (200,200), color=(73,109,137))
+exif = im.getexif()
+exif[0x010e] = 'Demo camera'               # ImageDescription
+exif[0x9000] = 'ExifVersion'               # dummy
+exif[0x0132] = datetime.datetime.now().strftime('%Y:%m:%d %H:%M:%S')
+exif[0x8825] = {1: random.randint(-90,90), 2: random.randint(0,180)}  # fake GPS
+im.save('data/raw/photo1.jpg', exif=exif)
+PY
