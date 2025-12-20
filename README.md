@@ -7,6 +7,7 @@ ETL pipeline for parsing unstructured files (HTML, images, SRT) and loading into
 ETL pipeline for parsing unstructured files (HTML, images, SRT) and loading into MongoDB.
 
 ## It needs slight improvement.
+### It will soon updated with more features.
 
 ## Setup
 ```bash
@@ -19,4 +20,5 @@ pip install -r requirements.txt
 # hackathon password123
 
 # cont ID = 2b36d07964ff96409db43c2fbadf21b2230c5676c7c99bd8f289e6c2aa5aa858
+
 
