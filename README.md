@@ -1,29 +1,135 @@
-# ETL Pipeline
+![Lets VIBE Together Banner](assets/banner.png)
 
-ETL pipeline for parsing unstructured files (HTML, images, SRT) and loading into MongoDB. It shows real dashboard how your schema evolve over time for dynamic data.
+# 🚀 ETL_PIPELINE (DYNAMIC)
+### A Dynamic ETL Pipeline with Automatic Schema Evolution
 
-## ETL Pipeline
+---
 
+## 📌 About
+Lets_VIBE_together is a Python-based ETL (Extract, Transform, Load) pipeline.
 
-ETL pipeline for parsing unstructured files (HTML, images, SRT) and loading into MongoDB.
+It automatically:
+- Reads raw data files from a folder
+- Detects file type
+- Parses the data
+- Evolves the database schema dynamically
+- Loads processed data into MongoDB
+- Prevents re-processing of files
 
-## It needs slight improvement.
-### It will soon updated with more features.
+---
 
-## Setup
-```bash
+## 🧠 What is ETL?
+ETL stands for:
+- **Extract** – Read raw data files
+- **Transform** – Parse and structure the data
+- **Load** – Store the data into a database
+
+---
+
+## ✨ Features
+- Automatic file discovery
+- Supports multiple file formats
+- Dynamic schema evolution
+- MongoDB integration
+- Modular pipeline design
+- Error-safe processing
+
+---
+
+## 🗂 Project Structure
+```
+Lets_VIBE_together/
+│
+├── data/
+│ └── raw/
+│
+├── src/
+│ ├── pipeline/
+│ │ ├── extractor.py
+│ │ ├── parsers.py
+│ │ ├── schema.py
+│ │ └── loader.py
+│ │
+│ └── config.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ How It Works
+1. Finds raw files inside `data/raw`
+2. Reads and parses each file
+3. Automatically evolves schema if needed
+4. Loads processed data into MongoDB
+5. Moves processed files to avoid duplication
+
+---
+
+## 🛠 Requirements
+- Python 3.9+
+- MongoDB
+- pip
+
+---
+
+## 📥 Installation
+
+Clone the repository:
+```
+git clone https://github.com/ShivenduShivu/Lets_VIBE_together.git
+cd Lets_VIBE_together
+```
+---
+```
+Create and activate virtual environment:
+
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# or
-venv\Scripts\activate     # Windows
+
+
+Windows:
+
+venv\Scripts\activate
+
+
+Mac / Linux:
+
+source venv/bin/activate
+
+
+Install dependencies:
+
 pip install -r requirements.txt
-# Digest: sha256:86835e8da0f94efd61334decb320fa43e8a60027688cbd856bf29d065b470338
-# hackathon password123
 
-# cont ID = 2b36d07964ff96409db43c2fbadf21b2230c5676c7c99bd8f289e6c2aa5aa858
+▶️ Run the Project
 
+Add files to:
 
-
-
+data/raw/
 
 
+Run:
+
+python main.py
+```
+---
+
+## ⚠️ Error Handling
+
+Errors are caught per file
+
+Pipeline continues processing remaining files
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 📬 Author
+
+Created by ShivenduShivu
